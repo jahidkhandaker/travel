@@ -44,10 +44,13 @@ class loginController extends Controller
     		$data=array('name'=>$user_name,'email'=>$email,'userPass'=>$password);
 
     			DB::table('user_info')->insert($data);
+
+                $p = DB::select('select * from places ');
+
+                return view('index', ['pal' => $p]);
     	}
     	
     	//echo "....".$email."....".$password;
-        return view('index');
     }
 
     
