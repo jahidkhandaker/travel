@@ -26,11 +26,10 @@ class allViews extends Controller
 	{
 
 		$e = $req->input('v');
-
-		 //$d = DB::table('places')->get();
-		$d = DB::select('select * from hotels');
 		
-		 return view('demo', ['demo' => $d]);
+		$p = DB::select('select * from  hotels where pId = ?' ,[$e]);
+		
+		return view('demo', ['demo' => $p]);
 
        
     }
