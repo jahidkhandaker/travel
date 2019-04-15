@@ -15,27 +15,19 @@ class allViews extends Controller
 
 		 $p = DB::table('places')->get();
 		
-		 return view('t.destination', ['pal' => $p]);
+		 return view('index', ['pal' => $p]);
         
-    }
+    }	
 
-    public function hotelresto()
+    public function demo(Request $req)
 	{
 
-		 $p = DB::table('places')->get();
-		
-		 return view('t.destination', ['pal' => $p]);
-        
+		$e = $req->input('v');
+
+		echo $e;
+		echo "hello world";
+
+       
     }
-
-    public function guides()
-	{
-
-		 $p = DB::table('places')->get();
-		
-		 return view('t.destination', ['pal' => $p]);
-        
-    }
-	
-
+   
 }

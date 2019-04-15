@@ -18,11 +18,11 @@ class loginController extends Controller
     	if(count($checkLogin) >0)
     	{
            // echo $checkLogin;
-            return view('t.index');
+            return view('index');
     	}
     	else{
     		//echo "sorry";
-            return view('t.layout.loginpage');
+            return view('layouts.loginpage');
     	}
     }
 
@@ -47,7 +47,7 @@ class loginController extends Controller
     	}
     	
     	//echo "....".$email."....".$password;
-        return view('t.index');
+        return view('index');
     }
 
     
