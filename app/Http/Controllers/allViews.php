@@ -13,8 +13,11 @@ class allViews extends Controller
 	public function viewPlaces()
 	{
 
-		 $p = DB::table('places')->get();
+		 //$p = DB::table('places')->get();
 		
+		//$p = DB::select('select * from places where active = ?', [1]);
+		$p = DB::select('select * from places ');
+
 		 return view('index', ['pal' => $p]);
         
     }	
@@ -24,8 +27,10 @@ class allViews extends Controller
 
 		$e = $req->input('v');
 
-		echo $e;
-		echo "hello world";
+		 //$d = DB::table('places')->get();
+		$d = DB::select('select * from hotels');
+		
+		 return view('demo', ['demo' => $d]);
 
        
     }

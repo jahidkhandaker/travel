@@ -17,9 +17,9 @@
 
             <div class="col-md-4">
               <div class="common_sight">
-               <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->img ) }}"/></a>
-                  <h5> <input type="submit" name="v" value="{{ $u->name }}"> </h5>
-                  <p> {{ $u->district }} </p>
+               <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->pImg ) }}"/></a>
+                  <h5> <input type="submit" name="v" value="{{ $u->pName }}"> </h5>
+                  <p> {{ $u->pDistrict }} </p>
               </div>
             </div>
 

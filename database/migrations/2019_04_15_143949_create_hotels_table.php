@@ -14,12 +14,16 @@ class CreateHotelsTable extends Migration
     public function up()
     {
         Schema::create('hotels', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name',100);
-            $table->string('city',100);
-            $table->string('district',100);
-            $table->string('pricing',8);
-            $table->binary('img');
+            $table->bigIncrements('hId');
+            $table->string('hName',20);
+            $table->string('hCity',20);
+            $table->string('hDistrict',20);
+            $table->unsignedBigInteger('pId');
+            $table->foreign('pId')->references('pId')->on('places');
+            $table->string('hDescription',200);
+            $table->string('hContact',30);
+            $table->string('hAbout2',100);
+            $table->binary('hImg');
             $table->timestamps();
         });
     }
