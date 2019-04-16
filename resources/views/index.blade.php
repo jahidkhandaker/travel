@@ -20,6 +20,8 @@
                <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->pImg ) }}"/></a>
                   <h5> <input type="submit" name="v" value="{{$u->pName}}"> </h5>
                   <p> {{ $u->pDistrict }} </p>
+                  <p>{{ $u->hContact }} </p>
+                  <p>{{ $u->hCity }} </p>
               </div>
             </div>
 
