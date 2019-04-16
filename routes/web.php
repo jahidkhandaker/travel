@@ -14,18 +14,16 @@
 
 
 
-Route::get('/', function () {
-    return view('t.index');
-});
 
-Route::get('/destination', 'allViews@viewPlaces');
+Route::get('/', 'allViews@viewPlaces');
+Route::post('/demo', 'allViews@demo');
 
-Route::get('/hotelresto', function () {
-    return view('t.hotelresto');
-});
+// Route::get('/hotelresto', function () {
+//     return view('t.hotelresto');
+// });
 
 Route::get('/loginpage', function () {
-    return view('t.layout.loginpage');
+    return view('layouts.loginpage');
 });
 
 //Route::get('/cox', 'allViews@viewPlaces');

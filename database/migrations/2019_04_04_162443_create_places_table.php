@@ -14,11 +14,14 @@ class CreatePlacesTable extends Migration
     public function up()
     {
         Schema::create('places', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name',100);
-            $table->string('city',100);
-            $table->string('district',100);
-            $table->binary('img');
+            $table->bigIncrements('pId');
+            $table->string('pName',20);
+            $table->string('pCity',20);
+            $table->string('pDistrict',20);
+            $table->string('pDescription',200);
+            $table->string('pAbout1',100);
+            $table->string('pAbout2',100);
+            $table->binary('pImg');
             $table->timestamps();
         });
     }

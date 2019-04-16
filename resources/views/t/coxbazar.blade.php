@@ -1,1 +1,0 @@
-@extends('t.layout.content')
