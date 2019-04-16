@@ -178,6 +178,15 @@
 	.common_ghide h5{
 		padding-top: 30px;
 	}
+
+	.common_sight input{
+	font-family: inherit;
+    font-size: large;
+    background: none;
+    border: none;
+    padding: 0px 140px;
+}
+	}
 /*----------content end------*/
 
 /*--------Hotel Start-------*/
