@@ -13,13 +13,15 @@
 
         <div class="row">
 
-          @foreach ($demo as $u)
+          @foreach ($dem as $u)
 
             <div class="col-md-4">
               <div class="common_sight">
                <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
-                  <h5> {{ $u->hName }} </h5>
-                  <p> {{ $u->hDistrict }} </p>  
+                  <p> {{ $u->hName }} </p>
+                  <p> {{ $u->hContact }} </p>
+                  <p> {{ $u->hCity }} </p>
+                  <p> {{ $u->pDescription }} </p>
               </div>
             </div>
 
