@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bangladesh Tour</title>
+    <title>Happy Travel</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,7 +25,8 @@
             <div class="row">
                 <div class="col-md-2">
                     <div class="logo">
-                        <img src="images/logo_lp.png" class="img-responsive" alt="logo">
+                        <!-- <img src="images/logo_lp.png" class="img-responsive" alt="logo"> -->
+                        <h1> HAPPY TRAVEL </h1>
                     </div>
                 </div>
                 
