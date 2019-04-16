@@ -17,6 +17,9 @@
 Route::get('/', function () {
     return view('t.index');
 });
+Route::get('/coxbazar', function () {
+    return view('t.coxbazar');
+});
 
 Route::get('/destination', 'allViews@viewPlaces');
 

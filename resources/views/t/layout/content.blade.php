@@ -137,6 +137,7 @@
     @yield('insec')
     @yield('destination')
     @yield('hotelresto')
+    @yield('coxbazar_section')
 
 		
 	<section class="ftco-subscribe" style="background-image: url(images/bg_1.jpg);">

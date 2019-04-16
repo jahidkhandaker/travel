@@ -20,7 +20,7 @@
 	    				<div class="text">
 	    					<h4 class="price">$400</h4>
 	    					<span>15 Days Tour</span>
-	    					<h3><a href="project.html">Coxbazer, Chittagong</a></h3>
+	    					<h3><a href="coxbazar">Coxbazer, Chittagong</a></h3>
 	    					<div class="star d-flex clearfix">
 	    						<div class="mr-auto float-left">
 		    						<span class="ion-ios-star"></span>
