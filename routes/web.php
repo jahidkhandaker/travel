@@ -14,6 +14,10 @@
 
 
 
+// Route::get('/', function () {
+//     return view('index');
+// });
+
 
 Route::get('/', 'allViews@viewPlaces');
 Route::post('/demo', 'allViews@demo');
