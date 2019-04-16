@@ -18,6 +18,20 @@
             <div class="col-md-4">
               <div class="common_sight">
                <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
+                  <p> {{ $u->pName }} </p>
+                  <p> {{ $u->pCity }} </p>
+                  
+              </div>
+            </div>
+
+          @endforeach
+
+
+          @foreach ($dem as $u)
+
+            <div class="col-md-4">
+              <div class="common_sight">
+               <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
                   <p> {{ $u->hName }} </p>
                   <p> {{ $u->hContact }} </p>
                   <p> {{ $u->hCity }} </p>
@@ -26,6 +40,8 @@
             </div>
 
           @endforeach
+
+
         </div>
 
       </div>
