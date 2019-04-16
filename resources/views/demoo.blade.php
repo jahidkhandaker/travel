@@ -53,7 +53,35 @@
 
 <!-- ------------Hotel Booking Start--------------- -->
           <div class="col-md-4">
-            
+            <table>
+              <tr>
+                <td> Hotels</td>
+                <td>  Type</td>
+                <td>  Quanty</td> 
+                <td>CheckIn</td>
+                <td>Checkout</td>
+              </tr>
+              
+              <form action="/action_page.php"> 
+              <tr>
+                <td>
+                    <select name="cars">
+                      @foreach ($dem as $u)
+                      <option>{{$u->hName}}</option>
+                      @endforeach
+                    </select> 
+                </td>
+                <td>
+                  <select name="cars">
+                      @foreach ($dem as $u)
+                      <option>{{$u->hName}}</option>
+                      @endforeach
+                  </select> 
+                </td>
+              </tr>
+              </form>
+
+            </table>
             
           </div>
 <!-- ------------Hotel Booking END--------------- -->
