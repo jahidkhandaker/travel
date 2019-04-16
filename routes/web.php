@@ -14,19 +14,6 @@
 
 
 
-<<<<<<< HEAD
-// Route::get('/', function () {
-//     return view('index');
-// });
-=======
-Route::get('/', function () {
-    return view('t.index');
-});
-Route::get('/coxbazar', function () {
-    return view('t.coxbazar');
-});
->>>>>>> 38eaf69232ed31bb6f432989baa05e3835b923da
-
 
 Route::get('/', 'allViews@viewPlaces');
 Route::post('/demo', 'allViews@demo');
