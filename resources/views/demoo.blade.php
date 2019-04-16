@@ -53,8 +53,16 @@
 
 <!-- ------------Hotel Booking Start--------------- -->
           <div class="col-md-4">
-            
-            
+        
+              <form action="reserve"> 
+              
+                    <select name="cars">
+                      @foreach ($dem as $u)
+                      <option>{{$u->hName}}</option>
+                      @endforeach
+                    </select> 
+               
+              </form>
           </div>
 <!-- ------------Hotel Booking END--------------- -->
         </div>
