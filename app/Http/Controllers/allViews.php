@@ -14,8 +14,7 @@ class allViews extends Controller
 	{
 
 		 //$p = DB::table('places')->get();
-		
-		//$p = DB::select('select * from places where active = ?', [1]);
+	
 		$p = DB::select('select * from places ');
 
 		 return view('index', ['pal' => $p]);
@@ -26,11 +25,10 @@ class allViews extends Controller
 	{
 
 		$e = $req->input('v');
-		
-		$p = DB::select('select * from  hotels where pId = ?' ,[$e]);
-		
-		return view('demo', ['demo' => $p]);
 
+		$ds = DB::select('SELECT * FROM places INNER JOIN hotels ON places.pId=hotels.hpId AND places.pName= ?',[$e]);
+
+		return view('demoo', ['dem' => $ds]);
        
     }
    

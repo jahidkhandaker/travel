@@ -19,7 +19,7 @@ class CreateHotelsTable extends Migration
             $table->string('hCity',20);
             $table->string('hDistrict',20);
             $table->unsignedBigInteger('pId');
-            $table->foreign('pId')->references('pId')->on('places');
+            $table->foreign('hpId')->references('pId')->on('places');
             $table->string('hDescription',200);
             $table->string('hContact',30);
             $table->string('hAbout2',100);
