@@ -15,6 +15,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('t.index');
 });
@@ -27,6 +28,8 @@ Route::get('/coxbazar', function () {
 // });
 >>>>>>> e37efe4a3c67b898bfa45854dadfda79affd58bc
 
+=======
+>>>>>>> 4bf010320b164bab0b3c8ae16c338ee580e6fc27
 
 Route::get('/', 'allViews@viewPlaces');
 Route::post('/demo', 'allViews@demo');
