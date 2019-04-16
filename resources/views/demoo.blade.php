@@ -13,7 +13,7 @@
 
         <div class="row">
 
-          @foreach ($dem as $u)
+          <!-- @foreach ($dem as $u)
 
             <div class="col-md-4">
               <div class="demo_sight">
@@ -24,7 +24,7 @@
               </div>
             </div>
 
-          @endforeach
+          @endforeach -->
 
 
           @foreach ($dem as $u)
