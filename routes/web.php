@@ -55,7 +55,9 @@ Route::post('/signUpMe', 'loginController@signUp');
 
 Route::post('/adminLogin', 'loginController@adminLogin');
 
-Route::post('/adminUp', 'database_controller@adminUp');
+Route::post('/adminPlacesUp', 'database_controller@adminPlacesUp');
+
+Route::post('/adminHotelsUp', 'database_controller@adminHotelsUp');
 
 Route::post('/adminOut', 'loginController@adminOut');
 

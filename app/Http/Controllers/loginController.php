@@ -17,8 +17,10 @@ class loginController extends Controller
     	$checkLogin = DB::table('user_info')->where(['email'=>$email,'userPass'=>$userPass]) ->get();
     	if(count($checkLogin) >0)
     	{
-           // echo $checkLogin;
-            return view('index');
+           $p = DB::select('SELECT * FROM places ');
+
+            return view('admin', ['pal' => $p]);
+            
     	}
     	else{
     		//echo "sorry";
@@ -52,7 +54,12 @@ class loginController extends Controller
     	
     	//echo "....".$email."....".$password;
     }
+    public function adminOut(Request $req)
+    {
+      
+        $p = DB::select('select * from places ');
 
-    
+        return view('index', ['pal' => $p]);
+    }
 
 }
