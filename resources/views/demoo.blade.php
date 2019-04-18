@@ -14,7 +14,7 @@
         </div>
  <!-- ------------Place Description Start--------------- -->
         <div class="row">
-          @foreach ($demp as $p)
+          @foreach ($place as $p)
 
             <div class="col-md-4">
               <div class="demo_hotel">
@@ -32,11 +32,12 @@
 
 
         <div class="row">
-
 <!-- ------------Hotel Description Start--------------- -->
           <div class="col-md-8"> 
             <div class="row">
-            @foreach ($dem as $u)
+            <form action="booking" method="POST">
+            @csrf
+            @foreach ($hotel as $u)
               <div class="col-md-4">
                 <div class="demo_hotel">
                   <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
@@ -44,30 +45,14 @@
                   <p> {{ $u->hContact }} </p>
                   <p> {{ $u->hCity }} </p>
                   <p> {{ $u->pDescription }} </p>
+                  <input type="submit" name="bk" value="{{$u->hName}}">
                 </div>
               </div>
             @endforeach
+          </form>
             </div>
           </div>
 <!-- ------------Hotel Description END--------------- -->
-
-<!-- ------------ Guides Start--------------- -->
-          <div class="col-md-4">
-            <div class="row">
-           <!--  @foreach ($gd as $u)
-              <div class="col-md-4">
-                <div class="demo_hotel">
-                  <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->gImg ) }}"/></a>
-                  <p> {{ $u->gName }} </p>
-                  <p> {{ $u->gContact }} </p>
-                  <p> {{ $u->gAddress }} </p>
-                  <p> {{ $u->gDescription }} </p>
-                </div>
-              </div>
-            @endforeach -->
-            </div>
-          </div>
-<!-- ------------Guides END--------------- -->
         </div>
 
       </div>

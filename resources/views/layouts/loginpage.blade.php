@@ -32,10 +32,6 @@
 	    </div>
 	  </nav>
 
-	
-
-	 
-
 	<div class="login-reg-panel">
 		<div class="login-info-box">
 			<h2>Have an account?</h2>
