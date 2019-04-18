@@ -13,46 +13,59 @@
           </div>
         </div>
  <!-- ------------Place Description Start--------------- -->
-        <div class="row">
+        <div class="row place-driscription">
+          <div class="container">
           @foreach ($place as $p)
 
-            <div class="col-md-4">
-              <div class="demo_hotel">
+            <div class="col-md-6">
+              <div class="demo_hotel main-place">
                <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $p->pImg ) }}"/></a>
+              </div>
+            </div>
+            <div class="col-md-6 place-data">
                   <h1> {{ $p->pName }} </h1>
-                  <p> {{ $p->pDescription }} </p>
-                  <p> {{ $p->pCity }} </p>
-                  <p> {{ $p->pDescription }} </p>
+                  <p class="place-title"> CITY: <span class="place-description">{{ $p->pCity }}</span> </p>
+                  <p class="place-title"> DISTRICT: <span class="place-description">{{ $p->pDistrict }}</span> </p>
+                  <p class="place-title"> ABOUT: <span class="place-description">{{ $p->pAbout2 }}</span> </p>
+                  <p class="place-title"> DESCRIPTION: <span class="place-description">{{ $p->pDescription }}</span> </p>
               </div>
             </div>
 
           @endforeach
+          </div>
         </div>
 <!-- ------------Place Description END--------------- -->
 
 
-        <div class="row">
+        
 
 <!-- ------------Hotel Description Start--------------- -->
-          <div class="col-md-8"> 
+        <div class="row">  
+          <div class="container">
+          <div class="col-md-12"> 
             <div class="row">
-            <form action="booking" method="POST">
-            @csrf
-            @foreach ($hotel as $u)
-              <div class="col-md-4">
-                <div class="demo_hotel">
-                  <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
-                  <p> {{ $u->hName }} </p>
-                  <p> {{ $u->hContact }} </p>
-                  <p> {{ $u->hCity }} </p>
-                  <p> {{ $u->pDescription }} </p>
-                  <input type="submit" name="bk" value="{{$u->hId}}">
+              <form action="booking" method="POST">
+              @csrf
+              @foreach ($hotel as $u)
+                <div class="col-md-4">
+                  <div class="demo_hotel hotel-list">
+                    <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
+                    <div class="demo-details">
+                    <h1> {{ $u->hName }} </h1>
+                    <p> {{ $u->hCity }} </p>
+                    <p> {{ $u->hDistrict }} </p>
+                    <p> {{ $u->hContact }} </p>
+                    <p> {{ $u->hAbout2 }} </p>
+                    <p> {{ $u->pDescription }} </p>
+                    <input type="submit" name="bk" value="{{$u->hId}}">
+                    </div>
+                  </div>
                 </div>
-              </div>
-            @endforeach
-          </form>
-            </div>
+              @endforeach
+              </form>
           </div>
+          </div>
+        </div>
 <!-- ------------Hotel Description END--------------- -->
 
 <!-- ------------Hotel Booking Start--------------- -->
