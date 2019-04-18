@@ -52,8 +52,8 @@
 			 	@csrf
 			 	<div class="login-show">
 					<h2>LOGIN</h2>
-					<input type="text" name="email" placeholder="Email">
-					<input type="password" name="userPass" placeholder="Password">
+					<input type="text" name="email" placeholder="Email" required="">
+					<input type="password" name="userPass" placeholder="Password" required="">
 					<input type="submit" name="login" value="Login">
 					<a href="">Forgot password?</a>
 				</div>
@@ -64,10 +64,10 @@
 		 		@csrf
 		 		<div class="register-show">
 					<h2>REGISTER</h2>
-					<input type="text" name="user_name" placeholder="Name">
-					<input type="text" name="email" placeholder="Email">
-					<input type="password" name="password" placeholder="Password">
-					<input type="password" placeholder="Confirm Password">
+					<input type="text" name="user_name" placeholder="Name" required="">
+					<input type="text" name="email" placeholder="Email" required="">
+					<input type="password" name="password" placeholder="Password" required="">
+					<input type="password" placeholder="Confirm Password" required="">
 					<input type="submit" name="register" value="Register">
 				</div>
 	 		</form>
