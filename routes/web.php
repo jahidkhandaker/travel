@@ -23,6 +23,8 @@ Route::get('/', 'allViews@viewPlaces');
 
 Route::post('/demo', 'allViews@demo');
 
+Route::post('/booking', 'allViews@booking');
+
 
 
 Route::get('/loginpage', function () {

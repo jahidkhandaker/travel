@@ -36,6 +36,8 @@
 <!-- ------------Hotel Description Start--------------- -->
           <div class="col-md-8"> 
             <div class="row">
+            <form action="booking" method="POST">
+            @csrf
             @foreach ($hotel as $u)
               <div class="col-md-4">
                 <div class="demo_hotel">
@@ -44,9 +46,11 @@
                   <p> {{ $u->hContact }} </p>
                   <p> {{ $u->hCity }} </p>
                   <p> {{ $u->pDescription }} </p>
+                  <input type="submit" name="bk" value="{{$u->hId}}">
                 </div>
               </div>
             @endforeach
+          </form>
             </div>
           </div>
 <!-- ------------Hotel Description END--------------- -->
