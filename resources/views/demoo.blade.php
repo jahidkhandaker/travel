@@ -32,7 +32,6 @@
 
 
         <div class="row">
-
 <!-- ------------Hotel Description Start--------------- -->
           <div class="col-md-8"> 
             <div class="row">
@@ -46,7 +45,7 @@
                   <p> {{ $u->hContact }} </p>
                   <p> {{ $u->hCity }} </p>
                   <p> {{ $u->pDescription }} </p>
-                  <input type="submit" name="bk" value="{{$u->hId}}">
+                  <input type="submit" name="bk" value="{{$u->hName}}">
                 </div>
               </div>
             @endforeach
