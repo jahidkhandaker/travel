@@ -57,5 +57,31 @@ class database_controller extends Controller
     return view('admin', ['pal' => $p]);
    
    }
+
+   public function reservation(Request $req)
+   {
+        $cName = $req->input('cName');
+        $cAddress = $req->input('cAddress');
+        $cMobile = $req->input('cMobile');
+        $cEmail = $req->input('cEmail');
+        $cQuantity = $req->input('cQuantity');
+        $rsHotel = $req->input('rsHotel');
+        $rsRoomtype = $req->input('rsRoomtype');
+        $rsRoomQuantity = $req->input('rsRoomQuantity');
+        $checkin = $req->input('checkin');
+        $checkout = $req->input('checkout');
+
+        $data=array('cName'=>$cName, 'cAddress'=>$cAddress, 'cMobile'=>$cMobile, 'cEmail'=>$cEmail, 'cQuantity'=>$cQuantity, 'rsHotel'=>$rsHotel, 'rsRoomtype'=>$rsRoomtype, 'rsRoomQuantity'=>$rsRoomQuantity,  'checkin' => $checkin ,'checkout' => $checkout );
+
+
+        DB::table('reservation')->insert($data);
+
+        echo "Successfully Uploded";
+
+        $p = DB::select('SELECT * FROM places ');
+
+         return view('index', ['pal' => $p]);
+
+   }
    
 }

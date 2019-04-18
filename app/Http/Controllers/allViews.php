@@ -30,9 +30,8 @@ class allViews extends Controller
 
 		$ds = DB::select('SELECT * FROM places INNER JOIN hotels ON places.pId=hotels.hpId AND places.pName= ?',[$e]);
 		
-		$dg = DB::select('SELECT * FROM places INNER JOIN guides ON places.pId=guides.gpId AND places.pName= ?',[$e]);
 
-		return view('demoo', ['place' => $dp] , ['hotel' => $ds] ,['guide' => $dg]);
+		return view('demoo', ['place' => $dp] , ['hotel' => $ds]);
        
     }
 
@@ -40,7 +39,6 @@ class allViews extends Controller
    {
 
    		$b=$req->input('bk');	
-
 
 		$ht = DB::select('SELECT * FROM hotels WHERE hotels.hName= ?',[$b]);
 

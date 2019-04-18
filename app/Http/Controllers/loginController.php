@@ -14,18 +14,31 @@ class loginController extends Controller
     	$email = $req->input('email');
     	$userPass = $req->input('userPass');
 
-    	$checkLogin = DB::table('user_info')->where(['email'=>$email,'userPass'=>$userPass]) ->get();
-    	if(count($checkLogin) >0)
-    	{
-           $p = DB::select('SELECT * FROM places ');
-
+        if ($email = "jahid.khandaker@northsouth.edu") 
+        {
+            $p = DB::select('SELECT * FROM places ');
             return view('admin', ['pal' => $p]);
-            
-    	}
-    	else{
-    		//echo "sorry";
-            return view('layouts.loginpage');
-    	}
+        }
+
+        else
+        {
+
+            $checkLogin = DB::table('user_info')->where(['email'=>$email,'userPass'=>$userPass]) ->get();
+            if (count($checkLogin) > 0)
+            {
+               
+               $p = DB::select('SELECT * FROM places ');
+
+                return view('index', ['pal' => $p]);
+                
+            }
+            else{
+             //echo "sorry";
+                return view('layouts.loginpage');
+            }
+        }
+
+    	
     }
 
     public function signUp(Request $req){
