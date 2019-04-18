@@ -30,10 +30,10 @@ class allViews extends Controller
 
 		$dp = DB::select('SELECT * FROM places WHERE places.pName= ?',[$e]);
 		
-		$ds = DB::select('SELECT * FROM places INNER JOIN guides ON places.pId=guides.gpId AND places.pName= ?',[$e]);
+		$dg = DB::select('SELECT * FROM places INNER JOIN guides ON places.pId=guides.gpId AND places.pName= ?',[$e]);
 
 
-		return view('demoo', ['dem' => $ds] , ['demp' => $dp] , ['demg' => $dg]);
+		return view('demoo', ['dem' => $ds] , ['demp' => $dp] , ['gd' => $dg] );
        
     }
    

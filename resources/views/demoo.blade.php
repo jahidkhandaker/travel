@@ -51,10 +51,10 @@
           </div>
 <!-- ------------Hotel Description END--------------- -->
 
-<!-- ------------Hotel Booking Start--------------- -->
+<!-- ------------ Guides Start--------------- -->
           <div class="col-md-4">
             <div class="row">
-            @foreach ($demg as $u)
+           <!--  @foreach ($gd as $u)
               <div class="col-md-4">
                 <div class="demo_hotel">
                   <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->gImg ) }}"/></a>
@@ -64,20 +64,10 @@
                   <p> {{ $u->gDescription }} </p>
                 </div>
               </div>
-            @endforeach
+            @endforeach -->
             </div>
-              <!-- <form action="reserve"> 
-                    <select name="Hotels">
-                      @foreach ($dem as $u)
-                      <option>{{$u->hName}}</option>
-                      @endforeach
-                    </select> 
-                     <br/><br/>
-                    <input type="Submit" name="bookNow" placeholder="bookNow">
-                                  
-              </form> -->
           </div>
-<!-- ------------Hotel Booking END--------------- -->
+<!-- ------------Guides END--------------- -->
         </div>
 
       </div>

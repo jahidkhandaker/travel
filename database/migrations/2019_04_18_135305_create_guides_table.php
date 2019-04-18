@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGiudesTable extends Migration
+class CreateGuidesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateGiudesTable extends Migration
      */
     public function up()
     {
-        Schema::create('giudes', function (Blueprint $table) {
+        Schema::create('guides', function (Blueprint $table) {
             $table->bigIncrements('gId');
             $table->string('gName',20);
             $table->string('gAddress',20);
@@ -21,7 +21,7 @@ class CreateGiudesTable extends Migration
             $table->foreign('gpId')->references('pId')->on('places');
             $table->string('gDescription',200);
             $table->string('gContact',30);
-            $table->binary('gImg');s
+            $table->binary('gImg');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateGiudesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('giudes');
+        Schema::dropIfExists('guides');
     }
 }
