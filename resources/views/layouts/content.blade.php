@@ -20,7 +20,7 @@
 </head>
 <body>
  
-    <section class="navbar_section">
+    <section class="navbar_section navbar_custom">
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
@@ -73,7 +73,7 @@
 
   
 
-  <section style="background-color: black;">
+  <section style="background-color: inherit;">
     <div class="container">
       <div class="row text-center" style="color: white;">
        <h4></h4>

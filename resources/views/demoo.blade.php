@@ -19,7 +19,7 @@
             <div class="col-md-4">
               <div class="demo_hotel">
                <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $p->pImg ) }}"/></a>
-                  <p> {{ $p->pName }} </p>
+                  <h1> {{ $p->pName }} </h1>
                   <p> {{ $p->pDescription }} </p>
                   <p> {{ $p->pCity }} </p>
                   <p> {{ $p->pDescription }} </p>
@@ -55,12 +55,24 @@
           <div class="col-md-4">
         
               <form action="reserve"> 
-              
-                    <select name="cars">
+                    <input type="text" name="cname" placeholder="Name">
+                    <br/><br/>
+                    <input type="text" name="email" placeholder="Email">
+                    <br/><br/>
+                    <input type="text" name="email" placeholder="Email">
+                    <br/><br/>
+                    <input type="text" name="email" placeholder="Email">
+                    <br/><br/>
+                    <input type="text" name="email" placeholder="Email">
+                    <br/><br/>
+                    <input type="text" name="email" placeholder="Email">
+                    <br/><br/>
+                    <select name="Hotels">
                       @foreach ($dem as $u)
                       <option>{{$u->hName}}</option>
                       @endforeach
                     </select> 
+
                
               </form>
           </div>
