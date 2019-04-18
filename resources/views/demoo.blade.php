@@ -14,7 +14,7 @@
         </div>
  <!-- ------------Place Description Start--------------- -->
         <div class="row">
-          @foreach ($demp as $p)
+          @foreach ($place as $p)
 
             <div class="col-md-4">
               <div class="demo_hotel">
@@ -36,7 +36,7 @@
 <!-- ------------Hotel Description Start--------------- -->
           <div class="col-md-8"> 
             <div class="row">
-            @foreach ($dem as $u)
+            @foreach ($hotel as $u)
               <div class="col-md-4">
                 <div class="demo_hotel">
                   <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
@@ -52,30 +52,10 @@
 <!-- ------------Hotel Description END--------------- -->
 
 <!-- ------------Hotel Booking Start--------------- -->
-          <div class="col-md-4">
-            <div class="row">
-            @foreach ($demg as $u)
-              <div class="col-md-4">
-                <div class="demo_hotel">
-                  <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->gImg ) }}"/></a>
-                  <p> {{ $u->gName }} </p>
-                  <p> {{ $u->gContact }} </p>
-                  <p> {{ $u->gAddress }} </p>
-                  <p> {{ $u->gDescription }} </p>
-                </div>
-              </div>
-            @endforeach
-            </div>
-              <!-- <form action="reserve"> 
-                    <select name="Hotels">
-                      @foreach ($dem as $u)
-                      <option>{{$u->hName}}</option>
-                      @endforeach
-                    </select> 
-                     <br/><br/>
-                    <input type="Submit" name="bookNow" placeholder="bookNow">
-                                  
-              </form> -->
+         <div class="col-md-4">
+           <div class="row">
+          
+           </div>
           </div>
 <!-- ------------Hotel Booking END--------------- -->
         </div>

@@ -20,17 +20,15 @@
 
 
 Route::get('/', 'allViews@viewPlaces');
+
 Route::post('/demo', 'allViews@demo');
 
-// Route::get('/hotelresto', function () {
-//     return view('t.hotelresto');
-// });
+
 
 Route::get('/loginpage', function () {
     return view('layouts.loginpage');
 });
 
-//Route::get('/cox', 'allViews@viewPlaces');
 
 Route::post('/loginme', 'loginController@signin');
 

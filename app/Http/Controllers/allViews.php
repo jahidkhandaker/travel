@@ -13,9 +13,9 @@ class allViews extends Controller
 	public function viewPlaces()
 	{
 
-		 //$p = DB::table('places')->get();
 	
-		$p = DB::select('select * from places ');
+	
+		$p = DB::select('SELECT * FROM places ');
 
 		 return view('index', ['pal' => $p]);
         
@@ -26,14 +26,14 @@ class allViews extends Controller
 
 		$e = $req->input('v');
 
-		$ds = DB::select('SELECT * FROM places INNER JOIN hotels ON places.pId=hotels.hpId AND places.pName= ?',[$e]);
-
 		$dp = DB::select('SELECT * FROM places WHERE places.pName= ?',[$e]);
+
+		$ds = DB::select('SELECT * FROM places INNER JOIN hotels ON places.pId=hotels.hpId AND places.pName= ?',[$e]);
 		
-		$ds = DB::select('SELECT * FROM places INNER JOIN guides ON places.pId=guides.gpId AND places.pName= ?',[$e]);
+		$dg = DB::select('SELECT * FROM places INNER JOIN guides ON places.pId=guides.gpId AND places.pName= ?',[$e]);
 
 
-		return view('demoo', ['dem' => $ds] , ['demp' => $dp] , ['demg' => $dg]);
+		return view('demoo', ['place' => $dp] , ['hotel' => $ds] ,['guide' => $dg]);
        
     }
    
