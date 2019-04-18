@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
     
     
    
@@ -23,14 +25,14 @@
     <section class="navbar_section navbar_custom">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <div class="logo">
                         <!-- <img src="images/logo_lp.png" class="img-responsive" alt="logo"> -->
                         <h1> HAPPY TRAVEL </h1>
                     </div>
                 </div>
                 
-                 <div class="col-md-8 col-md-offset-2 custom_nav">
+                 <div class="col-md-8  custom_nav">
   
 
                      <nav class="navbar navbar-inverse">
