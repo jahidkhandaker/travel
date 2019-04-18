@@ -42,9 +42,9 @@ class allViews extends Controller
 
 		$ht = DB::select('SELECT * FROM hotels WHERE hotels.hName= ?',[$b]);
 
-		// $ds = DB::select('SELECT * FROM places INNER JOIN hotels ON places.pId=hotels.hpId AND places.pName= ?',[$e]);
+		$room = DB::select('SELECT roomtype.rType, roomtype.rDescription, roomtype.rImg, roomquantity.qAmount FROM  roomtype ,roomquantity, hotels  WHERE hotels.hId=roomquantity.qhId AND roomquantity.qrId=roomtype.rId AND hotels.hName=?',[$b]);
 
-		return view('layouts.booking', ['hotel' => $ht]);
+		return view('layouts.booking', ['hotel' => $ht], ['room' => $room] );
 
    }
    
