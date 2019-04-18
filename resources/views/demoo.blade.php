@@ -53,28 +53,29 @@
 
 <!-- ------------Hotel Booking Start--------------- -->
           <div class="col-md-4">
-        
-              <form action="reserve"> 
-                    <input type="text" name="cname" placeholder="Name">
-                    <br/><br/>
-                    <input type="text" name="email" placeholder="Email">
-                    <br/><br/>
-                    <input type="text" name="email" placeholder="Email">
-                    <br/><br/>
-                    <input type="text" name="email" placeholder="Email">
-                    <br/><br/>
-                    <input type="text" name="email" placeholder="Email">
-                    <br/><br/>
-                    <input type="text" name="email" placeholder="Email">
-                    <br/><br/>
+            <div class="row">
+            @foreach ($demg as $u)
+              <div class="col-md-4">
+                <div class="demo_hotel">
+                  <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->gImg ) }}"/></a>
+                  <p> {{ $u->gName }} </p>
+                  <p> {{ $u->gContact }} </p>
+                  <p> {{ $u->gAddress }} </p>
+                  <p> {{ $u->gDescription }} </p>
+                </div>
+              </div>
+            @endforeach
+            </div>
+              <!-- <form action="reserve"> 
                     <select name="Hotels">
                       @foreach ($dem as $u)
                       <option>{{$u->hName}}</option>
                       @endforeach
                     </select> 
-
-               
-              </form>
+                     <br/><br/>
+                    <input type="Submit" name="bookNow" placeholder="bookNow">
+                                  
+              </form> -->
           </div>
 <!-- ------------Hotel Booking END--------------- -->
         </div>

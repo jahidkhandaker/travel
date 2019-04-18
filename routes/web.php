@@ -44,3 +44,4 @@ Route::post('/adminHotelsUp', 'database_controller@adminHotelsUp');
 
 Route::post('/adminOut', 'loginController@adminOut');
 
+
