@@ -41,11 +41,11 @@
               <div class="col-md-4">
                 <div class="demo_hotel">
                   <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
-                  <p> {{ $u->hName }} </p>
+                  <input type="text" name="bk" value="{{$u->hName}}">
                   <p> {{ $u->hContact }} </p>
                   <p> {{ $u->hCity }} </p>
                   <p> {{ $u->pDescription }} </p>
-                  <input type="submit" name="bk" value="{{$u->hName}}">
+                  <input type="submit" name="" value="Book Now">
                 </div>
               </div>
             @endforeach
