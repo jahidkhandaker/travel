@@ -16,13 +16,15 @@
           @foreach ($pal as $u)
 
             <div class="col-md-4">
-              <div class="common_sight">
+              <div class="common_sight hotel-list">
                <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->pImg ) }}"/></a>
-                  <h5> <input type="submit" name="v" value="{{$u->pName}}"> </h5>
+               <div class="demo-details-main">
+                  <h1> <input type="submit" name="v" value="{{$u->pName}}"> </h1>
                   <p> {{ $u->pDistrict }} </p>
                   <p>{{ $u->pAbout1 }} </p>
                   <p>{{ $u->pAbout2 }} </p>
               </div>
+            </div>
             </div>
 
           @endforeach
