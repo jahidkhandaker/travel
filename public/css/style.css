@@ -11,6 +11,10 @@
 	background-color: black;
 }
 
+.navbar_custom{
+	background: transparent !important;
+}
+
 .custom_nav{
 	padding-top: 15px;
 }
@@ -26,7 +30,7 @@
 	background: transparent;
 }
 .logo h1{
-	color: white;
+	color: black;
 }
 
 .navbar-brand { position: relative; z-index: 2; }

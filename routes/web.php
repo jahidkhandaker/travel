@@ -14,27 +14,10 @@
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('t.index');
-});
-Route::get('/coxbazar', function () {
-    return view('t.coxbazar');
-});
-=======
-=======
->>>>>>> af5e7347739871f7dd585394d0ecb173440ae16d
 // Route::get('/', function () {
 //     return view('index');
 // });
 
-<<<<<<< HEAD
-=======
->>>>>>> 4bf010320b164bab0b3c8ae16c338ee580e6fc27
-=======
->>>>>>> af5e7347739871f7dd585394d0ecb173440ae16d
 
 Route::get('/', 'allViews@viewPlaces');
 Route::post('/demo', 'allViews@demo');
