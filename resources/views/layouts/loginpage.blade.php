@@ -47,7 +47,7 @@
             </div>
 
             <div class="input-group">
-              <button class="btn btn-md btn-rounded btn-block form-control submit" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+              <button id ="sub" class="btn btn-md btn-rounded btn-block form-control submit" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
             </div>
 
             <a href="#" id="forgot_pswd">Forgot password?</a>
