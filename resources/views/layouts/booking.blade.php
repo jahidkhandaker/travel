@@ -33,7 +33,7 @@
 	    </div>
 	  </nav>
 
-
+	
 	<div class="row place-driscription">
     	<div class="container">
          @foreach ($hotel as $h)
@@ -68,7 +68,6 @@
                   </div>
                 </div>
               @endforeach
-
 	  	</div>
 	</div>
 
