@@ -111,7 +111,7 @@
                             <li><a href="#">News</a></li>
                             <li><a href="#">Contact</a></li>
                             <li>
-                              <a class="btn btn-default btn-outline btn-circle btn btn-primary btn-lg" href="loginpage">Sign In</a>
+                              <a class="btn btn-default btn-outline btn-circle btn btn-primary btn-lg sign_in" href="loginpage">Sign In</a>
                             </li>
                 </ul>
                   <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">

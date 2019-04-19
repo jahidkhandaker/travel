@@ -56,9 +56,9 @@
 			 	@csrf
 			 	<div class="login-show">
 					<h2>LOGIN</h2>
-					<input type="text" name="email" placeholder="Email">
-					<input type="password" name="userPass" placeholder="Password">
-					<input type="submit" name="login" value="Login">
+					<input type="text" name="email" placeholder="Email" id = "user_nam">
+					<input type="password" name="userPass" placeholder="Password" id="use_pass">
+					<input type="submit" name="login" value="Login" id="sub">
 					<a href="">Forgot password?</a>
 				</div>
 			 </form>
