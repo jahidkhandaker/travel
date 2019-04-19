@@ -19,7 +19,6 @@
     background: none;
     border: none;
 }
-<<<<<<< HEAD
 .custom_navbar ul li{
     
 }
@@ -37,20 +36,7 @@
     color: #020202 !important;
     transition: 0.5;
 }
-=======
 
-.custom_nav{
-	padding-top: 20px;
-}
-
-.navbar {
-    background: transparent !important;
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 0px;
-    border: none;
->>>>>>> 825420f7d16db503b81dea99018a0abdab9a98ed
-}
 .logo{
 	background: transparent;
 
@@ -94,10 +80,10 @@
 /*----Navbar end--------*/
 
 /*------header start--------*/
- header{
+ /*header{
 	min-height: 550px;
 }
-
+*/
 
 .ha-bg-parallax {
 	background: url(images/group_env203.jpg) 50% -0 no-repeat fixed;

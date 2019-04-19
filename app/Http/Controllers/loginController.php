@@ -14,14 +14,14 @@ class loginController extends Controller
     	$email = $req->input('email');
     	$userPass = $req->input('userPass');
 
-        if ($email = "jahid.khandaker@northsouth.edu") 
-        {
-            $p = DB::select('SELECT * FROM places ');
-            return view('admin', ['pal' => $p]);
-        }
+        // if ($email = "jahid.khandaker@northsouth.edu") 
+        // {
+        //     $p = DB::select('SELECT * FROM places ');
+        //     return view('index', ['pal' => $p]);
+        // }
 
-        else
-        {
+        // else
+        // {
 
             $checkLogin = DB::table('user_info')->where(['email'=>$email,'userPass'=>$userPass]) ->get();
             if (count($checkLogin) > 0)
@@ -36,7 +36,7 @@ class loginController extends Controller
              //echo "sorry";
                 return view('layouts.loginpage');
             }
-        }
+        // }
 
     	
     }

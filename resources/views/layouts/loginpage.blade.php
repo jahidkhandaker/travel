@@ -34,15 +34,15 @@
 
 	  <div class="container">
 	  	<div id="logreg-forms">
-        <form class="form-signin">
+        <form class="form-signin" action="loginme" method="POST">
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
            
             <div class="input-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+              <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
             </div>
 
             <div class="input-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+              <input type="password" id="inputPassword" name="userPass" class="form-control" placeholder="Password" required="">
             </div>
 
             <div class="input-group">
