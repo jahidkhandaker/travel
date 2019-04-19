@@ -13,9 +13,9 @@ class allViews extends Controller
 	public function viewPlaces()
 	{
 
-		 //$p = DB::table('places')->get();
 	
-		$p = DB::select('select * from places ');
+	
+		$p = DB::select('SELECT * FROM places ');
 
 		 return view('index', ['pal' => $p]);
         
@@ -26,12 +26,26 @@ class allViews extends Controller
 
 		$e = $req->input('v');
 
-		$ds = DB::select('SELECT * FROM places INNER JOIN hotels ON places.pId=hotels.hpId AND places.pName= ?',[$e]);
-
 		$dp = DB::select('SELECT * FROM places WHERE places.pName= ?',[$e]);
 
-		return view('demoo', ['dem' => $ds] , ['demp' => $dp]);
+		$ds = DB::select('SELECT * FROM places INNER JOIN hotels ON places.pId=hotels.hpId AND places.pName= ?',[$e]);
+		
+
+		return view('demoo', ['place' => $dp] , ['hotel' => $ds]);
        
     }
+
+   public function booking(Request $req)
+   {
+
+   		$b=$req->input('bk');	
+
+		$ht = DB::select('SELECT * FROM hotels WHERE hotels.hName= ?',[$b]);
+
+		$room = DB::select('SELECT roomtype.rType, roomtype.rDescription, roomtype.rImg, roomquantity.qAmount FROM  roomtype ,roomquantity, hotels  WHERE hotels.hId=roomquantity.qhId AND roomquantity.qrId=roomtype.rId AND hotels.hName=?',[$b]);
+
+		return view('layouts.booking', ['hotel' => $ht], ['room' => $room] );
+
+   }
    
 }

@@ -20,17 +20,19 @@
 
 
 Route::get('/', 'allViews@viewPlaces');
+
 Route::post('/demo', 'allViews@demo');
 
-// Route::get('/hotelresto', function () {
-//     return view('t.hotelresto');
-// });
+Route::post('/booking', 'allViews@booking');
+
+Route::post('/reserve', 'database_controller@reservation');
+
+
 
 Route::get('/loginpage', function () {
     return view('layouts.loginpage');
 });
 
-//Route::get('/cox', 'allViews@viewPlaces');
 
 Route::post('/loginme', 'loginController@signin');
 
@@ -43,4 +45,5 @@ Route::post('/adminPlacesUp', 'database_controller@adminPlacesUp');
 Route::post('/adminHotelsUp', 'database_controller@adminHotelsUp');
 
 Route::post('/adminOut', 'loginController@adminOut');
+
 

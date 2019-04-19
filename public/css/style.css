@@ -19,6 +19,7 @@
     background: none;
     border: none;
 }
+<<<<<<< HEAD
 .custom_navbar ul li{
     
 }
@@ -36,6 +37,19 @@
     color: #020202 !important;
     transition: 0.5;
 }
+=======
+
+.custom_nav{
+	padding-top: 20px;
+}
+
+.navbar {
+    background: transparent !important;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: none;
+>>>>>>> 825420f7d16db503b81dea99018a0abdab9a98ed
 }
 .logo{
 	background: transparent;
@@ -43,6 +57,8 @@
 }
 .logo h1{
 	color: black;
+	margin: 0;
+	padding-top: 25px;
 }
 
 .navbar-brand { position: relative; z-index: 2; }
@@ -68,6 +84,12 @@
     .navbar .nav-collapse .navbar-form { margin: 0; }
     .nav-collapse>li { float: none; }
 }
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color: #000;
+    background-color: transparent;
+}
+
 
 /*----Navbar end--------*/
 
@@ -191,15 +213,6 @@
 		padding-top: 20px;
 		padding-bottom: 30px;
 	}
-
-	.common_sight img{
-		height: 400px;
-		padding-top: 30px;
-	}
-
-	.common_sight h5{
-		padding-top: 30px;
-	}
 	.common_guide img{
 		height: 200px;
 		padding-top: 30px;
@@ -214,7 +227,6 @@
     font-size: large;
     background: none;
     border: none;
-    padding: 0px 140px;
 }
 	}
 /*----------content end------*/
@@ -384,3 +396,144 @@
 
 /*-------review end------*/
 
+
+
+
+
+
+/*-------place-driscription start------*/
+
+.place-driscription{
+	padding: 40px 0px 40px 0px;
+}
+.main-place{
+	padding: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 2px 10px #888888;
+}
+.main-place img{
+	width: 100%;
+	height: 300px;
+}
+.place-data h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 600;
+}
+.place-description {
+	color: black;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0px 0px 0px 10px;
+}
+.place-title{
+	color:blue;
+	font-family: 'Exo 2', sans-serif;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0px 0px 0px 30px;
+}
+/*-------place-driscription end------*/
+
+
+
+/*-------hotel-description start------*/
+.hotel-list {
+    padding: 10px;
+    margin: 15px 0px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 2px 10px #888888;
+    border-radius: 10px;
+}
+
+.hotel-list img{
+	width: 100%;
+	height: 250px;
+	border-radius: 10px;
+}
+
+.demo-details{
+	padding: 20px;
+}
+.demo-details h1{
+	font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+.demo-details p{
+	font-family: 'Exo 2', sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+}
+.demo-details input {
+	background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 5px 30px;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.demo-details input:hover {
+	background-color: black;
+	color:white;
+}
+/*-------hotel-description start------*/
+
+/*-------hotel-list-main start------*/
+.demo-details-main{
+	padding: 20px;
+}
+.demo-details-main h1{
+	font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+.demo-details-main p{
+	font-family: 'Exo 2', sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+}
+.demo-details-main input {
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    color: green;
+}
+.demo-details-main input:hover {
+    color: blue;
+}
+/*-------hotel-list-main end------*/
+
+
+
+
+
+
+
+
+
+/*-------for responsive start------*/
+
+@media only screen and (max-width: 600px) {
+
+}
+
+
+
+/*-------for responsive end------*/
