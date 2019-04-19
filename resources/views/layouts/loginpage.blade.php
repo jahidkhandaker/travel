@@ -4,10 +4,10 @@
 <head>
 	<title>SignIN</title>
 
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="css/loginpage.css">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/loginpage.css">
 </head>
 <body>
 
@@ -32,92 +32,77 @@
 	    </div>
 	  </nav>
 
-	<div class="login-reg-panel">
-		<div class="login-info-box">
-			<h2>Have an account?</h2>
-			<p>Lorem ipsum dolor sit amet</p>
-			<label id="label-register" for="log-reg-show">Login</label>
-			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
-		</div>
-							
-		<div class="register-info-box">
-			<h2>Don't have an account?</h2>
-			<p>Lorem ipsum dolor sit amet</p>
-			<label id="label-login" for="log-login-show">Register</label>
-			<input type="radio" name="active-log-panel" id="log-login-show">
-		</div>
-							
-		<div class="white-panel">
-			 <form action="loginme" method="POST">
-			 	@csrf
-			 	<div class="login-show">
-					<h2>LOGIN</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
-					<input type="text" name="email" placeholder="Email" id = "user_nam">
-					<input type="password" name="userPass" placeholder="Password" id="use_pass">
-					<input type="submit" name="login" value="Login" id="sub">
-=======
-					<input type="text" name="email" placeholder="Email" required="">
-					<input type="password" name="userPass" placeholder="Password" required="">
-					<input type="submit" name="login" value="Login">
->>>>>>> 825420f7d16db503b81dea99018a0abdab9a98ed
-=======
-					<input type="text" name="email" placeholder="Email" required="" id="use_name">
-					<input type="password" name="userPass" placeholder="Password" required="" id="use_pass">
-					<input type="submit" name="login" value="Login" id="sub">
->>>>>>> master
-					<a href="">Forgot password?</a>
-				</div>
-			 </form>
-			
+	  <div class="container">
+	  	<div id="logreg-forms">
+        <form class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+           
+            <div class="input-group">
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            </div>
 
-			<form action="signUpMe" method="POST">
-		 		@csrf
-		 		<div class="register-show">
-					<h2>REGISTER</h2>
-					<input type="text" name="user_name" placeholder="Name" required="" id="id_1">
-					<input type="text" name="email" placeholder="Email" required="" id="id_2">
-					<input type="password" name="password" placeholder="Password" required="" id="id_3">
-					<input type="password" placeholder="Confirm Password" required="" id="id_4">
-					<input type="submit" name="register" value="Register" id="id_5">
-				</div>
-	 		</form>
-			
-		</div>
-	</div>
+            <div class="input-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            </div>
 
-	<script type="text/javascript">
-		
-		$(document).ready(function(){
-			$('.login-info-box').fadeOut();
-			$('.login-show').addClass('show-log-panel');
-		});
+            <div class="input-group">
+              <button class="btn btn-md btn-rounded btn-block form-control submit" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+            </div>
 
+            <a href="#" id="forgot_pswd">Forgot password?</a>
+            <hr>
+            <!-- <p>Don't have an account!</p>  -->
+            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+            </form>
 
-		$('.login-reg-panel input[type="radio"]').on('change', function() {
-			if($('#log-login-show').is(':checked')) {
-				$('.register-info-box').fadeOut(); 
-				$('.login-info-box').fadeIn();
+            <!-- <form action="#" class="form-reset">
+                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+                <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+            </form> -->
 
-				$('.white-panel').addClass('right-log');
-				$('.register-show').addClass('show-log-panel');
-				$('.login-show').removeClass('show-log-panel');
+            <form action="#" class="form-signup">
 
-			}
-			else if($('#log-reg-show').is(':checked')) {
-				$('.register-info-box').fadeIn();
-				$('.login-info-box').fadeOut();
+                <p style="text-align:center">OR</p>
 
-				$('.white-panel').removeClass('right-log');
+                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                <input type="password" id="user-repeatpass" class="form-control" placeholder="Confirm Password" required autofocus="">
 
-				$('.login-show').addClass('show-log-panel');
-				$('.register-show').removeClass('show-log-panel');
-			}
-		});
+			<div class="input-group">
+			  <button class="btn btn-md btn-block submit" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+			</div>
 
+                <a href="#" id="cancel_signup"><i class="fa fa-angle-left"></i> Back</a>
+            </form>
+            <br>
 
-	</script>
+    </div>
+	  </div>
 
+	 <script type="text/javascript">
+	 	
+	 	function toggleResetPswd(e){
+    e.preventDefault();
+    $('#logreg-forms .form-signin').toggle() // display:block or none
+    $('#logreg-forms .form-reset').toggle() // display:block or none
+}
+
+function toggleSignUp(e){
+    e.preventDefault();
+    $('#logreg-forms .form-signin').toggle(); // display:block or none
+    $('#logreg-forms .form-signup').toggle(); // display:block or none
+}
+
+$(()=>{
+    // Login Register Form
+    $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
+    $('#logreg-forms #cancel_reset').click(toggleResetPswd);
+    $('#logreg-forms #btn-signup').click(toggleSignUp);
+    $('#logreg-forms #cancel_signup').click(toggleSignUp);
+})
+	 </script> 
+	
 </body>
 </html>
