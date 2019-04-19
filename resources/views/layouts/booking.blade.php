@@ -9,6 +9,9 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/booking.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
+
 </head>
 <body>
 
@@ -34,13 +37,13 @@
 	  </nav>
 
 	
-	<div class="row place-driscription">
+	<div class="row">
     	<div class="container">
          @foreach ($hotel as $h)
 
             <div class="col-md-6">
               <div class="demo_hotel main-place">
-               <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $h->hImg ) }}"/></a>
+               <a  href="" ><img src="data:image/jpeg;base64,{{ base64_encode( $h->hImg ) }}"/></a>
               </div>
             </div>
             <div class="col-md-6 place-data">
@@ -49,7 +52,6 @@
                   <p class="place-title"> DISTRICT: <span class="place-description"> {{ $h->hDistrict }}</span> </p>
                   <p class="place-title"> ABOUT: <span class="place-description">{{ $h->hContact }}</span> </p>
                   <p class="place-title"> DESCRIPTION: <span class="place-description">{{ $h->hAbout2 }}</span> </p>
-                  <p class="place-title"> DESCRIPTION: <span class="place-description">{{ $h->hDescription }}</span> </p>
               </div>
         @endforeach
         </div>
@@ -73,49 +75,70 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-offset-3">
+			<div class="col-md-12 book-form">
 				<form action="reserve" method="post">
 					@csrf
-					<label>Name:</label>
-					<input type="text" name="cName" placeholder="Name" required="">
-					<br><br>
-					<label>Address:</label>
-					<input type="text" name="cAddress" placeholder="Address" required="">
-					<br><br>
-					<label>Contact No.:</label>
-					<input type="text" name="cMobile" placeholder="Mobile" required="">
-					<br><br>
-					<label>Email:</label>
-					<input type="text" name="cEmail" placeholder="Email" required="">
-					<br><br>
-					<label>Persons:</label>
-					<input type="number" name="cQuantity" placeholder="Quantity" required="">
-					<br><br>
-					
-					<label>Hotel Name:</label>
-					@foreach ($hotel as $h)
-						<input type="text" name="rsHotel" value="{{ $h->hName }}">
-					@endforeach
-					<br><br>
-
-					<label>Room Type:</label>
-					<select name="rsRoomtype">
-						@foreach ($room as $r)
-						<option>{{ $r->rType }}</option>
-						@endforeach
-					</select>
-					<br><br>
-
-					<label>Room Quantity:</label>
-					<input type="number" name="rsRoomQuantity" placeholder="RoomQuantity" required="">
-					<br><br>
-					<label>Check In Date:</label>
-					<input type="date" name="checkin" required="">
-					<br><br>
-					<label>Check Out Date:</label>
-					<input type="date" name="checkout" required="">
-					<br><br>	
-					<input type="submit" name="submit" value="Book">		          	
+					<table class="book-main-form">
+						<tr>
+							<td>
+								<label>Name:</label><br>
+								<input type="text" name="cName" placeholder="Name" required="">
+							</td>
+							<td>
+								<label>Email:</label><br>
+								<input type="text" name="cEmail" placeholder="Email" required="">
+							</td>
+							<td>
+								<label>Address:</label><br>
+								<input type="text" name="cAddress" placeholder="Address" required="">
+							</td>
+							<td>
+								<label>Contact No.:</label><br>
+								<input type="text" name="cMobile" placeholder="Mobile" required="">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Address:</label><br>
+								<input type="text" name="cAddress" placeholder="Address" required="">
+							</td>
+							<td>
+								<label>Persons:</label><br>
+								<input type="number" name="cQuantity" placeholder="Quantity" required="">
+							</td>
+							<td>
+								<label>Hotel Name:</label><br>
+								@foreach ($hotel as $h)
+									<input type="text" name="rsHotel" value="{{ $h->hName }}">
+								@endforeach
+							</td>
+							<td>
+								<label>Room Type:</label><br>
+								<select name="rsRoomtype">
+									@foreach ($room as $r)
+									<option>{{ $r->rType }}</option>
+									@endforeach
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Room Quantity:</label><br>
+								<input type="number" name="rsRoomQuantity" placeholder="RoomQuantity" required="">
+							</td>
+							<td>
+								<label>Check In Date:</label><br>
+								<input type="date" name="checkin" required="">
+							</td>
+							<td>
+								<label>Check Out Date:</label><br>
+								<input type="date" name="checkout" required="">
+							</td>
+							<td>
+								<input class="book-submit" type="submit" name="submit" value="Book Now">
+							</td>
+						</tr>
+					</table>          	
 				</form>
 			</div>
 		</div>

@@ -49,14 +49,12 @@
                   <div class="demo_hotel hotel-list">
                     <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
                     <div class="demo-details">
-                    <input type="Submit" name="bk" value="{{$u->hName}}">
                     <p> {{ $u->hCity }} </p>
                     <p> {{ $u->hDistrict }} </p>
                     <p> {{ $u->hContact }} </p>
                     <p> {{ $u->hAbout2 }} </p>
                     <p> {{ $u->hDescription }} </p>
                     <input type="Submit" name="bk" value="{{$u->hName}}">
-                    <p>Click To Book Now</p>
                     </div>
                   </div>
                 </div>
