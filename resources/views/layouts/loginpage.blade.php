@@ -53,6 +53,7 @@
 			 	<div class="login-show">
 					<h2>LOGIN</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<input type="text" name="email" placeholder="Email" id = "user_nam">
 					<input type="password" name="userPass" placeholder="Password" id="use_pass">
 					<input type="submit" name="login" value="Login" id="sub">
@@ -61,6 +62,11 @@
 					<input type="password" name="userPass" placeholder="Password" required="">
 					<input type="submit" name="login" value="Login">
 >>>>>>> 825420f7d16db503b81dea99018a0abdab9a98ed
+=======
+					<input type="text" name="email" placeholder="Email" required="" id="use_name">
+					<input type="password" name="userPass" placeholder="Password" required="" id="use_pass">
+					<input type="submit" name="login" value="Login" id="sub">
+>>>>>>> master
 					<a href="">Forgot password?</a>
 				</div>
 			 </form>
@@ -70,11 +76,11 @@
 		 		@csrf
 		 		<div class="register-show">
 					<h2>REGISTER</h2>
-					<input type="text" name="user_name" placeholder="Name" required="">
-					<input type="text" name="email" placeholder="Email" required="">
-					<input type="password" name="password" placeholder="Password" required="">
-					<input type="password" placeholder="Confirm Password" required="">
-					<input type="submit" name="register" value="Register">
+					<input type="text" name="user_name" placeholder="Name" required="" id="id_1">
+					<input type="text" name="email" placeholder="Email" required="" id="id_2">
+					<input type="password" name="password" placeholder="Password" required="" id="id_3">
+					<input type="password" placeholder="Confirm Password" required="" id="id_4">
+					<input type="submit" name="register" value="Register" id="id_5">
 				</div>
 	 		</form>
 			
