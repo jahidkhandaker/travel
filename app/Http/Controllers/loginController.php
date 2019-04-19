@@ -19,7 +19,8 @@ class loginController extends Controller
            
            if (count( $checkLogin) > 0)
             {
-                if ($email = $admin) {
+                if ($email == $admin) 
+                {
 
                   $p = DB::select('SELECT * FROM places ');
 
@@ -27,7 +28,8 @@ class loginController extends Controller
                 
                 }
 
-                else{
+                else
+                {
 
                 $p = DB::select('SELECT * FROM places ');
 
@@ -40,7 +42,7 @@ class loginController extends Controller
              return view('layouts.loginpage');
             }
          }
-         
+
     public function signUp(Request $req){
 
     	// $user_name = $req->input('user_name');
