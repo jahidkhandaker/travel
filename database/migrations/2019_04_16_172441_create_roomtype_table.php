@@ -17,6 +17,7 @@ class CreateRoomtypeTable extends Migration
             $table->bigIncrements('rId');
             $table->string('rType',30);
             $table->string('rDescription',100);
+            $table->binary('rImg');
             $table->timestamps();
         });
     }

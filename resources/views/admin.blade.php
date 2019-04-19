@@ -43,13 +43,13 @@
             </tr>
 
             <tr>  
-              <td><input type="text" name="pName"></td>
-              <td><input type="text" name="pCity"></td>
-              <td><input type="text" name="pDistrict"></td>
-              <td><input type="textarea" name="pDescription"></td>
-              <td><input type="text" name="pAbout1"></td>
-              <td><input type="text" name="pAbout2"></td>
-              <td><input type="file" name="pImg"></td>
+              <td><input type="text" name="pName" required=""></td>
+              <td><input type="text" name="pCity" required=""></td>
+              <td><input type="text" name="pDistrict" required=""></td>
+              <td><input type="textarea" name="pDescription" required=""></td>
+              <td><input type="text" name="pAbout1" required=""></td>
+              <td><input type="text" name="pAbout2" required=""></td>
+              <td><input type="file" name="pImg" required=""></td>
               <td><input type="submit" name="placesubmit" value="submit"></td>
             </tr>
           </table>
@@ -75,14 +75,14 @@
             </tr>
 
             <tr>  
-              <td><input type="text" name="hpId"></td>
-              <td><input type="text" name="hName"></td>
-              <td><input type="text" name="hCity"></td>
-              <td><input type="text" name="hDistrict"></td>
-              <td><input type="textarea" name="hDescription"></td>
-              <td><input type="text" name="hContact"></td>
-              <td><input type="text" name="hAbout2"></td>
-              <td><input type="file" name="hImg"></td>
+              <td><input type="text" name="hpId" required=""></td>
+              <td><input type="text" name="hName" required=""></td>
+              <td><input type="text" name="hCity" required=""></td>
+              <td><input type="text" name="hDistrict" required=""></td>
+              <td><input type="textarea" name="hDescription" required=""></td>
+              <td><input type="text" name="hContact" required=""></td>
+              <td><input type="text" name="hAbout2" required=""></td>
+              <td><input type="file" name="hImg" required=""></td>
               <td><input type="submit" name="placesubmit" value="submit"></td>
             </tr>
           </table>

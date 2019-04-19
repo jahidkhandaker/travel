@@ -25,6 +25,8 @@ Route::post('/demo', 'allViews@demo');
 
 Route::post('/booking', 'allViews@booking');
 
+Route::post('/reserve', 'database_controller@reservation');
+
 
 
 Route::get('/loginpage', function () {

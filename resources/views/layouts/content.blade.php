@@ -378,9 +378,9 @@
                 var backgrounds = new Array(
 
                    
-                     ' url(images/Nilgiri.jpg)' ,
-                    'url(images/group_env203.jpg)' ,
-                    'url(images/St_Martin.jpg)'     
+                     ' url(images/banner1.jpg)' ,
+                    'url(images/banner2.jpg)' ,
+                    'url(images/banner3.jpg)'     
 
 
                     );

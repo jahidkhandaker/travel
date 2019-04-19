@@ -29,9 +29,8 @@
                   <p class="place-title"> ABOUT: <span class="place-description">{{ $p->pAbout2 }}</span> </p>
                   <p class="place-title"> DESCRIPTION: <span class="place-description">{{ $p->pDescription }}</span> </p>
               </div>
-            </div>
-
           @endforeach
+          </div>
           </div>
         </div>
 <!-- ------------Place Description END--------------- -->
@@ -50,13 +49,14 @@
                   <div class="demo_hotel hotel-list">
                     <a  href="" ><img class="img-responsive" src="data:image/jpeg;base64,{{ base64_encode( $u->hImg ) }}"/></a>
                     <div class="demo-details">
-                    <input type="text" name="bk" value="{{$u->hName}}">
+                    <input type="Submit" name="bk" value="{{$u->hName}}">
                     <p> {{ $u->hCity }} </p>
                     <p> {{ $u->hDistrict }} </p>
                     <p> {{ $u->hContact }} </p>
                     <p> {{ $u->hAbout2 }} </p>
                     <p> {{ $u->hDescription }} </p>
-                     <input type="submit" name="" value="Book Now">
+                    <input type="Submit" name="bk" value="{{$u->hName}}">
+                    <p>Click To Book Now</p>
                     </div>
                   </div>
                 </div>
@@ -66,14 +66,6 @@
           </div>
         </div>
 <!-- ------------Hotel Description END--------------- -->
-
-<!-- ------------Hotel Booking Start--------------- -->
-         <div class="col-md-4">
-           <div class="row">
-          
-           </div>
-          </div>
-<!-- ------------Hotel Booking END--------------- -->
         </div>
 
       </div>
