@@ -34,7 +34,8 @@
 
 	  <div class="container">
 	  	<div id="logreg-forms">
-        <form class="form-signin" action="loginme" method="POST">
+        <form class="form-signin" action="loginme" method="post">
+        	@csrf
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
            
             <div class="input-group">
@@ -52,7 +53,7 @@
             <a href="#" id="forgot_pswd">Forgot password?</a>
             <hr>
             <!-- <p>Don't have an account!</p>  -->
-            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+            <button class="btn btn-primary btn-block" type="button" name="Submit" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
             </form>
 
             <!-- <form action="#" class="form-reset">
@@ -61,13 +62,12 @@
                 <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
             </form> -->
 
-            <form action="#" class="form-signup">
+            <form action="signUpMe" method="post" class="form-signup">
+            	@csrf
 
-                <p style="text-align:center">OR</p>
-
-                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
-                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
-                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                <input type="text" id="user-name" class="form-control" name="user_name" placeholder="Full name" required="" autofocus="">
+                <input type="email" id="user-email" class="form-control" name="email" placeholder="Email address" required autofocus="">
+                <input type="password" id="user-pass" class="form-control" name="password" placeholder="Password" required autofocus="">
                 <input type="password" id="user-repeatpass" class="form-control" placeholder="Confirm Password" required autofocus="">
 
 			<div class="input-group">

@@ -13,34 +13,34 @@ class loginController extends Controller
 
     	$email = $req->input('email');
     	$userPass = $req->input('userPass');
+        $admin="jahid.khandaker@northsouth.edu";
 
-        // if ($email = "jahid.khandaker@northsouth.edu") 
-        // {
-        //     $p = DB::select('SELECT * FROM places ');
-        //     return view('index', ['pal' => $p]);
-        // }
-
-        // else
-        // {
-
-            $checkLogin = DB::table('user_info')->where(['email'=>$email,'userPass'=>$userPass]) ->get();
-            if (count($checkLogin) > 0)
+        $checkLogin = DB::table('user_info')->where(['email'=>$email,'userPass'=>$userPass]) ->get();
+           
+           if (count( $checkLogin) > 0)
             {
-               
-               $p = DB::select('SELECT * FROM places ');
+                if ($email = $admin) {
+
+                  $p = DB::select('SELECT * FROM places ');
+
+                    return view('admin', ['pal' => $p]);
+                
+                }
+
+                else{
+
+                $p = DB::select('SELECT * FROM places ');
 
                 return view('index', ['pal' => $p]);
-                
+               }
             }
+           
             else{
-             //echo "sorry";
-                return view('layouts.loginpage');
+            
+             return view('layouts.loginpage');
             }
-        // }
-
-    	
-    }
-
+         }
+         
     public function signUp(Request $req){
 
     	// $user_name = $req->input('user_name');
@@ -52,6 +52,7 @@ class loginController extends Controller
 
     	if(count($check_duplicate) >0){
     		echo "Email Id already exist. Please Try another one";
+            return view('layouts.loginpage');
     	}
 
     	else{
