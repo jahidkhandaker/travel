@@ -7,7 +7,7 @@
 }
 
 .logo h1{
-    padding-top: 15px 0px; 
+    padding-top: 0px; 
     font-family: 'Inconsolata', monospace;
     letter-spacing: 10px;
     font-size: 30px;
@@ -22,12 +22,12 @@
 .custom_navbar ul li{
     
 }
-.custom_navbar ul li a{
+.custom_navbar ul li a {
     font-family: 'Playfair Display', serif;
     color: #777777;
     font-size: 15px !important;
     font-weight: 200;
-    padding: 35px;
+    padding: 6px 24px;
 }
 #padding_right_disable{
     padding-right: 0px;
@@ -41,10 +41,14 @@
 	background: transparent;
 
 }
+
+.main-header {
+    padding: 25px 0px 3px 0px;
+}
 .logo h1{
 	color: black;
 	margin: 0;
-	padding-top: 25px;
+	padding-top: 0px;
 }
 
 .navbar-brand { position: relative; z-index: 2; }
@@ -60,7 +64,10 @@
 .navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
 .nav-collapse>li { float: right; }
 
-.btn.btn-circle { border-radius: 50px; }
+.btn.btn-circle {
+    border-radius: 50px;
+    padding: 6px 35px;
+}
 .btn.btn-outline { background-color: transparent; }
 
 @media screen and (max-width: 767px) {
@@ -74,6 +81,13 @@
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
     color: #000;
     background-color: transparent;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0 !important;
+    border: 1px solid transparent;
 }
 
 

@@ -21,72 +21,16 @@
 
 </head>
 <body>
- 
-   <!--  <section class="navbar_section navbar_custom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="logo">
-                        
-                        <h1> HAPPY TRAVEL </h1>
-                    </div>
-                </div>
-                
-                 <div class="col-md-8  custom_nav">
-  
-
-                     <nav class="navbar navbar-inverse">
-      
-       
-                        <div class="navbar-header">
-                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-3">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                        </div>
-                    
-                        <div class="collapse navbar-collapse" id="navbar-collapse-3">
-                          <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Destination</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li>
-                              <a class="btn btn-default btn-outline btn-circle btn btn-primary btn-lg" href="loginpage">Sign In</a>
-                            </li>
-                          </ul>
-                          <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">
-                            <form class="navbar-form" role="search">
-                              <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search" />
-                              </div>
-                              <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                            </form>
-                          </div>
-                        </div>
-                    </nav> 
-                </div>
-            </div>
-        </div>       
-    </section>
- -->
-  
-  <body>
   
   <header>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row main-header">
         <div class="col-md-4">
           <div class="logo">
             <h1>HAPPY TRAVEL</h1>
           </div>
         </div>
         
-        
-
         <div class="col-md-8">
           
           <nav class="navbar navbar-default custom_navbar">
@@ -107,14 +51,13 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
-                  <li><a href="/">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Destination</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li>
-                              <a class="btn btn-default btn-outline btn-circle btn btn-primary btn-lg sign_in" href="loginpage">Sign In</a>
-                            </li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li> <a class="btn btn-default btn-outline btn-circle btn btn-primary btn-lg sign_in" href="loginpage">Sign In</a>
+                    </li>
                 </ul>
                   <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">
                             <form class="navbar-form" role="search">
