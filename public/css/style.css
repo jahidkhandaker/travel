@@ -1,33 +1,45 @@
 
-
+.header {
+    min-height: 200px;
+}
 .img-responsive{
-	width: 100% !important;
+    width: 100% !important;
 }
 
-
-/*----Navbar start--------*/
-.navbar_section{
-	min-height: 80px;
-	background-color: black;
+.logo h1{
+    padding-top: 15px 0px; 
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 10px;
+    font-size: 30px;
+    font-weight: 100;
+    color: #101010;
+    
 }
-
-.navbar_custom{
-	background: transparent !important;
-}
-
-.custom_nav{
-	padding-top: 15px;
-}
-
-.navbar {
-    background: transparent !important;
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 20px;
+.custom_navbar{
+    background: none;
     border: none;
+}
+.custom_navbar ul li{
+    
+}
+.custom_navbar ul li a{
+    font-family: 'Playfair Display', serif;
+    color: #777777;
+    font-size: 15px !important;
+    font-weight: 200;
+    padding: 35px;
+}
+#padding_right_disable{
+    padding-right: 0px;
+}
+.custom_navbar ul li a:hover{
+    color: #020202 !important;
+    transition: 0.5;
+}
 }
 .logo{
 	background: transparent;
+
 }
 .logo h1{
 	color: black;
